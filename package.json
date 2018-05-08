@@ -1,12 +1,12 @@
 {
   "name": "create-next-example-app",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "./node_modules/.bin/next",
+    "build": "./node_modules/.bin/next build",
+    "start": "./node_modules/.bin/next start"
   },
   "dependencies": {
-    "express": "^4.16.2",
+    "express": "^4.16.3",
     "isomorphic-fetch": "^2.2.1",
     "moment-jalaali": "^0.7.2",
     "next": "^5.0.0",
@@ -17,6 +17,7 @@
     "react-router": "^4.2.0",
     "react-router-redux": "^4.0.8",
     "redux": "^3.7.2",
+    "redux-form": "^7.3.0",
     "redux-thunk": "^2.2.0"
   }
 }
