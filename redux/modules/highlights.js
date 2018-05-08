@@ -54,7 +54,7 @@ export function ReposLoadSuccess(data) {
 	};
 }
 
-export function ReposLoad() {
+export function ReposLoad(query) {
 	return (dispatch, getState, client) => {
 		
 		dispatch({
@@ -62,7 +62,7 @@ export function ReposLoad() {
 		});
 		
 		return client
-			.get('search/repositories?sort=stars&order=desc')
+			.get(`search/repositories?q=language:${query}&sort=stars&order=desc`)
 			.then(data => {
 				dispatch(ReposLoadSuccess(data));
 			})
